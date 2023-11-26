@@ -1,0 +1,308 @@
+.navbar-brand {
+  color: #fff;
+  /* Ubah warna teks sesuai kebutuhan Anda */
+}
+
+.nav-link {
+  color: #fff;
+  /* Ubah warna teks sesuai kebutuhan Anda */
+}
+
+.nav-link:hover {
+  color: #800000;
+  /* Ubah warna teks saat dihover sesuai kebutuhan Anda */
+}
+
+.welcome {
+  text-align: center;
+}
+
+.welcome:hover {
+  text-transform: uppercase;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  opacity: 1;
+}
+
+.header-content {
+  position: relative;
+  height: 100vh; /* Menyamakan tinggi dengan tinggi layar */
+  background-image: url("img/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden; /* Menghilangkan overflow jika ada margin atau padding tambahan */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(61, 69, 159, 0.5);
+  /* Ubah warna overlay sesuai kebutuhan Anda */
+  z-index: 1;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .navbar-collapse {
+    background-color: #0E2954;
+    /* Ubah warna latar belakang menu dropdown */
+  }
+
+  .navbar-nav {
+    margin-top: 30px;
+    /* Atur jarak antara header dan navigasi dropdown */
+  }
+}
+
+
+
+.content h1 {
+  color: #fff;
+  /* Ubah warna teks sesuai kebutuhan Anda */
+  font-size: 32px;
+  /* Ubah ukuran teks sesuai kebutuhan Anda */
+  margin-bottom: 20px;
+}
+
+.content p {
+  color: #fff;
+  /* Ubah warna teks sesuai kebutuhan Anda */
+  font-size: 16px;
+  /* Ubah ukuran teks sesuai kebutuhan Anda */
+  margin-bottom: 20px;
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f0f2f5;
+  font-family: "Open Sans";
+  font-weight: 300;
+}
+
+h4 {
+  font-family: "Open Sans";
+  font-weight: 300;
+}
+
+p {
+  font-size: 12px;
+}
+
+.cd__main {
+  display: block !important;
+}
+
+.card-carousel {
+  position: relative;
+  margin: 0 auto 0 auto;
+  padding: 0;
+  max-width: 220px;
+  max-width: 100%;
+  height: 450px;
+  perspective: 2000px;
+  perspective-origin: top;
+}
+
+.carousel-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  /* Membuat gambar menjadi lingkaran */
+  border: 3px solid white;
+  /* Menambahkan border putih di sekitar gambar */
+  object-fit: cover;
+  /* Untuk mengatur agar gambar tetap proporsional di dalam lingkaran */
+  margin-bottom: 10px;
+  /* Tambahkan margin bottom untuk memberi jarak antara gambar dan konten lainnya */
+}
+
+.card-carousel .button-spin {
+  position: absolute;
+  top: 50%;
+  border: 0 none;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: "Open Sans";
+  font-weight: 800;
+  padding: 10px 16px;
+  text-shadow: 1px 1px 4px rgba(0, 54, 90, 0.5);
+}
+
+.card-carousel .button-spin:hover {
+  box-shadow: 0px 4px 4px 4px rgba(0, 54, 90, 0.15);
+}
+
+.card-carousel .button-spin:active {
+  box-shadow: none;
+}
+
+.card-carousel .button-spin.counterclockwise {
+  left: 0;
+}
+
+.card-carousel .button-spin.clockwise {
+  right: 0;
+}
+
+.card-carousel .inner-carousel {
+  position: relative;
+  width: 225px;
+  margin: 0 auto;
+  top: 80px;
+  transform-style: preserve-3d;
+}
+
+.card-carousel .inner-carousel>div {
+  position: absolute;
+  margin: 0 auto;
+  padding: 20px;
+  width: 220px;
+  height: 300px;
+  opacity: 1;
+  background-color: #fff;
+  color: #000;
+  border-radius: 10px;
+  transition: all 0.5s ease-out;
+  z-index: 1;
+  box-shadow: 0px 10px 10px 10px rgba(0, 54, 90, 0.15);
+  text-align: center;
+  /* Menyatukan teks di tengah secara horizontal */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-carousel .inner-carousel>div:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  opacity: 0.6;
+  background-color: #ddd;
+  z-index: 1;
+}
+
+.card-carousel .inner-carousel>div.counterclockwise:after,
+.card-carousel .inner-carousel>div.clockwise:after {
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+.card-carousel .inner-carousel>div.front:after {
+  content: none;
+}
+
+.card-carousel .inner-carousel>div.front {
+  background-color: #1245c8;
+  background-image: radial-gradient(circle 200px at center right, #2271c5, #2271c5);
+  color: #fff;
+}
+
+.card-carousel .inner-carousel>div.front a {
+  box-shadow: 0px 5px 5px 5px rgba(0, 54, 90, 0.15);
+}
+
+.card-carousel .inner-carousel>div.front a:hover,
+.card-carousel .inner-carousel>div.front a:focus {
+  border: 2px solid #1245c8;
+  padding: 5px 0;
+}
+
+.card-carousel .inner-carousel>div.front a:active {
+  box-shadow: none;
+}
+
+.card-carousel .inner-carousel>div h4 {
+  margin-bottom: 10px;
+}
+
+.card-carousel .inner-carousel>div p {
+  margin-bottom: 20px;
+}
+
+.card-carousel .inner-carousel>div a {
+  margin-top: auto;
+  /* Menggeser link ke bagian paling bawah kontainer */
+}
+
+.card-carousel .inner-carousel>div a {
+  position: absolute;
+  text-align: center;
+  bottom: 30px;
+  display: block;
+  width: 180px;
+  border: 1px solid #c9c9c9;
+  border-radius: 16px;
+  padding: 6px 0;
+  font-size: 12px;
+  font-weight: 500;
+  color: #000;
+  text-decoration: none;
+  background-color: #fff;
+  box-shadow: 0px 5px 8px 3px rgba(0, 54, 90, 0.1);
+}
+
+.section-3 {
+  text-align: center;
+  padding: 80px 0;
+}
+
+.card-carousel {
+  margin: 0 auto;
+  max-width: 1000px;
+  height: 450px;
+}
+
+.inner-carousel {
+  top: 0;
+}
+
+/*Page about.html styles*/
+.section-about {
+  padding: 80px 0;
+}
+
+.section-about h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.section-about p {
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.section-about img {
+  margin-top: 30px;
+}
+
+.section-about a {
+  display: block;
+  margin-top: 30px;
+}
